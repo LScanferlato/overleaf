@@ -40,5 +40,5 @@ RUN npm install -g grunt-cli && npm install
 EXPOSE 3000
 
 # Comando di avvio
-CMD ["grunt", "serve"]
+CMD ["npx", "grunt", "serve"]
 
