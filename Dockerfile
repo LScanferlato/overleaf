@@ -33,11 +33,12 @@ RUN git clone https://github.com/overleaf/overleaf.git /overleaf
 # Imposta la directory di lavoro
 WORKDIR /overleaf
 
-# Installa le dipendenze di Overleaf
-RUN npm install
+# Installa le dipendenze di Overleaf e Grunt
+RUN npm install -g grunt-cli && npm install
 
 # Espone le porte necessarie
 EXPOSE 3000
 
 # Comando di avvio
-CMD ["npx", "grunt", "serve"]
+CMD ["grunt", "serve"]
+
